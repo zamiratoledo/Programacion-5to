@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>The select Element</h2>
+<p>The select element defines a drop-down list:</p>
+<form onsubmit="algo(event)">
+    <input type="number" name="n1" id="n1">
+  <label for="op">operacion:</label>
+  <select id="op" name="op">
+    <option value="suma">+</option>
+    <option value="resta">-</option>
+    <option value="mult">*</option>
+    <option value="div">/</option>
+  </select>
+  <input type="number" name="n2" id="n2">
+  <input type="submit">
+</form>
+<h2 id="resultado"></h2>
+</body>
+<script type="text/javascript">
+function algo(event){
+event.preventDefault();
+if (op.value =="suma") {
+    resultado.innerText = parseInt(n1.value) + parseInt(n2.value);
+}
+if (op.value =="resta") {
+    resultado.innerText = parseInt(n1.value) - parseInt(n2.value);
+    console.log("restando");
+}
+if (op.value =="mult") {
+    resultado.innerText = parseInt(n1.value) * parseInt(n2.value);
+}
+if (op.value =="div") {
+    resultado.innerText = parseInt(n1.value) / parseInt(n2.value);
+}
+}
+</script>
+</html>
+
